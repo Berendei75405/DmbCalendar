@@ -9,13 +9,42 @@ import SwiftUI
 
 struct CalendarView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            backgroundStackView {
+                Rectangle()
+            }
         }
-        .padding()
+    }
+    
+    //MARK: - backgroundStackView
+    private func backgroundStackView<Content: View>(content: () -> Content) -> some View {
+        ZStack {
+            Rectangle()
+                .fill(Color("background"))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .ignoresSafeArea()
+            ScrollView {
+                content()
+            }
+            .padding(16)
+            .navigationTitle("User name")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .foregroundStyle(Color("other"))
+                        .frame(width: 30, height: 30)
+                        .background(
+                        Rectangle()
+                            .fill(Color("background"))
+                            .frame(width: 40, height: 40)
+                            .clipShape(.buttonBorder)
+                            .neumorphismUnSelectedStyle()
+                        )
+                }
+            }
+        }
     }
 }
 
