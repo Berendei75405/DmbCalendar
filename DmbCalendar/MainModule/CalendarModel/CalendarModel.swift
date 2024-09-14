@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+//MARK: - Military
+struct Military: Identifiable {
+    var id: ObjectIdentifier
+    var name: String
+    var dateStart: Date
+    var dateFinish: Date
+}
