@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+final class CalendarViewModel: ObservableObject {
+    @Published var militaryArray: [Military] = []
+    
+}

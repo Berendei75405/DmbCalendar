@@ -8,10 +8,36 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @StateObject var calendarViewModel = CalendarViewModel()
+    
     var body: some View {
         NavigationStack {
-            backgroundStackView {
-                Rectangle()
+            if calendarViewModel.militaryArray.isEmpty {
+                AddMilitaryView()
+                    .navigationTitle("Добавление солдата")
+                    .navigationBarTitleDisplayMode(.inline)
+            } else {
+                backgroundStackView {
+                    Rectangle()
+                        .navigationTitle("User name")
+                        .navigationBarTitleDisplayMode(.inline)
+                    //toolbar
+                        .toolbar {
+                            ToolbarItem(placement: .topBarLeading) {
+                                Image(systemName: "person.fill")
+                                    .resizable()
+                                    .foregroundStyle(Color("other"))
+                                    .frame(width: 30, height: 30)
+                                    .background(
+                                        Rectangle()
+                                            .fill(Color("background"))
+                                            .frame(width: 40, height: 40)
+                                            .clipShape(.buttonBorder)
+                                            .neumorphismUnSelectedStyle()
+                                    )
+                            }
+                        }
+                }
             }
         }
     }
@@ -27,23 +53,6 @@ struct CalendarView: View {
                 content()
             }
             .padding(16)
-            .navigationTitle("User name")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Image(systemName: "person.fill")
-                        .resizable()
-                        .foregroundStyle(Color("other"))
-                        .frame(width: 30, height: 30)
-                        .background(
-                        Rectangle()
-                            .fill(Color("background"))
-                            .frame(width: 40, height: 40)
-                            .clipShape(.buttonBorder)
-                            .neumorphismUnSelectedStyle()
-                        )
-                }
-            }
         }
     }
 }
