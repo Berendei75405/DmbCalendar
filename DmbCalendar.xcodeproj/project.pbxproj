@@ -12,6 +12,8 @@
 		146F424C2C8430A2002F64C7 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F424A2C8430A2002F64C7 /* CalendarModel.swift */; };
 		146F424F2C8433F8002F64C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F424D2C8433F8002F64C7 /* Extensions.swift */; };
 		146F42522C843401002F64C7 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F42502C843401002F64C7 /* Modifiers.swift */; };
+		146F42572C84870A002F64C7 /* AddMilitaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F42562C84870A002F64C7 /* AddMilitaryView.swift */; };
+		146F42592C876B1E002F64C7 /* AddMilitaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F42582C876B1D002F64C7 /* AddMilitaryViewModel.swift */; };
 		149800062C8355B000117192 /* DmbCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149800052C8355B000117192 /* DmbCalendarUITests.swift */; };
 		149800082C8355B000117192 /* DmbCalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149800072C8355B000117192 /* DmbCalendarUITestsLaunchTests.swift */; };
 		1498FFEB2C8355AF00117192 /* DmbCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498FFEA2C8355AF00117192 /* DmbCalendarApp.swift */; };
@@ -43,6 +45,8 @@
 		146F424A2C8430A2002F64C7 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		146F424D2C8433F8002F64C7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		146F42502C843401002F64C7 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		146F42562C84870A002F64C7 /* AddMilitaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMilitaryView.swift; sourceTree = "<group>"; };
+		146F42582C876B1D002F64C7 /* AddMilitaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMilitaryViewModel.swift; sourceTree = "<group>"; };
 		149800012C8355B000117192 /* DmbCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DmbCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		149800052C8355B000117192 /* DmbCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DmbCalendarUITests.swift; sourceTree = "<group>"; };
 		149800072C8355B000117192 /* DmbCalendarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DmbCalendarUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -111,6 +115,31 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		146F42532C848677002F64C7 /* AddMilitary */ = {
+			isa = PBXGroup;
+			children = (
+				146F42552C8486B6002F64C7 /* AddMilitaryViewModel */,
+				146F42542C84869E002F64C7 /* AddMilitaryView */,
+			);
+			path = AddMilitary;
+			sourceTree = "<group>";
+		};
+		146F42542C84869E002F64C7 /* AddMilitaryView */ = {
+			isa = PBXGroup;
+			children = (
+				146F42562C84870A002F64C7 /* AddMilitaryView.swift */,
+			);
+			path = AddMilitaryView;
+			sourceTree = "<group>";
+		};
+		146F42552C8486B6002F64C7 /* AddMilitaryViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				146F42582C876B1D002F64C7 /* AddMilitaryViewModel.swift */,
+			);
+			path = AddMilitaryViewModel;
+			sourceTree = "<group>";
+		};
 		149800042C8355B000117192 /* DmbCalendarUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +193,7 @@
 				1498FFEA2C8355AF00117192 /* DmbCalendarApp.swift */,
 				146F424E2C8433F8002F64C7 /* Extension */,
 				146F42512C843401002F64C7 /* Modifiers */,
+				146F42532C848677002F64C7 /* AddMilitary */,
 				149800142C8355FA00117192 /* MainModule */,
 				1498FFEE2C8355B000117192 /* Assets.xcassets */,
 				1498FFF02C8355B000117192 /* Preview Content */,
@@ -321,6 +351,8 @@
 				146F42492C84309A002F64C7 /* CalendarViewModel.swift in Sources */,
 				146F424C2C8430A2002F64C7 /* CalendarModel.swift in Sources */,
 				1498FFEB2C8355AF00117192 /* DmbCalendarApp.swift in Sources */,
+				146F42572C84870A002F64C7 /* AddMilitaryView.swift in Sources */,
+				146F42592C876B1E002F64C7 /* AddMilitaryViewModel.swift in Sources */,
 				146F42522C843401002F64C7 /* Modifiers.swift in Sources */,
 				146F42452C84141B002F64C7 /* CalendarView.swift in Sources */,
 			);

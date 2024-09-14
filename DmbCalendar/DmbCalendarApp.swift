@@ -11,7 +11,10 @@ import SwiftUI
 struct DmbCalendarApp: App {
     var body: some Scene {
         WindowGroup {
-            CalendarView()
+            GeometryReader { proxy in
+                CalendarView()
+                    .environment(\.mainWindowSize, proxy.size)
+            }
         }
     }
 }
